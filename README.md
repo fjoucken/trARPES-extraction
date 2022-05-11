@@ -5,6 +5,6 @@ It is adapted from the paper by Peng et al. [Review of Scientific Instruments 91
 
 There are two files for producing simulated ARPES spectra () and two files for training the CNN.
 
-The simulated ARPES spectra are obtained from a bilayer graphene lattice into which the hopping parameters are changed randomly. The E-k bands are computed with the [pybinding package] (https://docs.pybinding.site/en/stable/). The bands are obtained from two points chosen randomly within the first Brillouin zone.
+The simulated ARPES spectra are obtained from a bilayer graphene lattice into which the hopping parameters are changed randomly, between values very far from the actual values for bilayer graphene so that the bands produced are very diverse. The E-k bands are computed with the [pybinding package] (https://docs.pybinding.site/en/stable/). The bands are obtained from two points chosen randomly within the first Brillouin zone.
 
 ![alt text](loss_vs_epoch.jpg)
