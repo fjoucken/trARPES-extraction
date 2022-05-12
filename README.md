@@ -3,7 +3,7 @@
 
 It is adapted from the paper by Peng et al. [Review of Scientific Instruments 91, 033905 (2020)](https://aip.scitation.org/doi/full/10.1063/1.5132586) to deal with trARPES spectra, which are much noisier than equilibrium ARPES spectra.
 
-The simulated ARPES spectra are obtained from a bilayer graphene lattice into which the hopping parameters are changed randomly, between values very far from the actual values for bilayer graphene so that the bands produced are very diverse. The E-k bands are computed with the [pybinding package] (https://docs.pybinding.site/en/stable/). The bands are obtained from two points chosen randomly within the first Brillouin zone.
+The simulated ARPES spectra are obtained from a bilayer graphene lattice into which the hopping parameters are changed randomly, between values very far from the actual values for bilayer graphene so that the bands produced are very diverse. The E-k bands are computed with the [pybinding package] (https://docs.pybinding.site/en/stable). The bands are obtained from two points chosen randomly within the first Brillouin zone.
 
 There are two files for producing simulated ARPES spectra (Feature_ARPES_generation_main.py and Feature_ARPES_generation_utils.py) and two files for training the CNN  model (Feature_ARPES_CNN_main.py and Feature_ARPES_CNN_utils.py).
 
@@ -61,7 +61,7 @@ inver = 1
 g_decay_min = int(k_reso/5)
 ```
 
-And I used for the model the following parameters:
+For the model, I used the following parameters:
 
 ```
 #pixels is the number of pixels. 128 is working fine.
@@ -83,5 +83,5 @@ learning_rate = 0.0001
 #Loss should be MAE. BCE works as well but less well
 loss = "MAE"   #BCE is binary cross entropy, "dice" for dice
 ```
-
+The loss evolution during training was:
 ![alt text](loss_vs_epoch_VB.jpg)
