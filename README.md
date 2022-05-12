@@ -15,7 +15,7 @@ I have applied this technique to trARPES on semiconductor. In this case, excited
 
 For the valence band model, here are the parameters I used:
 
-`#I determine reso in and E
+`
 k_reso = 128
 E_reso = 128
 #number of bands
