@@ -12,8 +12,9 @@ Typically, a few thousands training spectra are enough to train a model. The mod
 I have applied this technique to trARPES on semiconductor. In this case, excited states in or close to the conduction band are separated from the valence band and I have trained two different models: one for the valence band bare band extraction and one for the excited state signal extraction.
 
 ### Valence band model
+
 For the valence band model, here are the parameters I used:
-'#I determine reso in and E
+`#I determine reso in and E
 k_reso = 128
 E_reso = 128
 #number of bands
@@ -46,5 +47,5 @@ thick = 3
 #that is for the excited states.
 #I actually don't use it now because I use high temperature and 
 inver = 1
-'
+`
 ![alt text](loss_vs_epoch.jpg)
