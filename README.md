@@ -178,7 +178,7 @@ Note that the main differences between the data used for the valence band and th
 ### Results on experimental trARPES data
 
 To apply the models to experimental data, you must first extract the regions of interest in the spectra you want to analyze and then apply the corresponding model to the regions of interest. 
-In the figure below, the models are applied to an experimental trARPES spectrum. The spectra has been obtained on bulk MoSe~2. Details on the experimental setup can be found in here [here](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10102/101020I/Ultrafast-extreme-ultraviolet-ARPES-studies-of-electronic-dynamics-in-two/10.1117/12.2251249.full?SSO=1) and [here](https://aip.scitation.org/doi/full/10.1063/1.5079677). The trARPES spectrum is on the green scale while the bare bands extracted from the excited states is in red and the bare bands extracted from the valence band is in blue: 
+In the figure below, the models are applied to an experimental trARPES spectrum. The spectra has been obtained on bulk MoSe~2. Details on the experimental setup can be found [here](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10102/101020I/Ultrafast-extreme-ultraviolet-ARPES-studies-of-electronic-dynamics-in-two/10.1117/12.2251249.full?SSO=1) and [here](https://aip.scitation.org/doi/full/10.1063/1.5079677). The trARPES spectrum is on the green scale while the bare bands extracted from the excited states is in red and the bare bands extracted from the valence band is in blue: 
 
 ![alt text](Fit_exp_data.jpg)
 
