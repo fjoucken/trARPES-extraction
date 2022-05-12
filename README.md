@@ -84,9 +84,11 @@ learning_rate = 0.0001
 loss = "MAE"   #BCE is binary cross entropy, "dice" for dice
 ```
 The loss evolution during training was: 
+
 ![alt text](loss_vs_epoch_VB.jpg)
 
 And here is how the model performs on simulated ARPES spectra: 
+
 ![alt text](Results_on_simu_VB.jpg)
 
 ### Excited states model
@@ -138,9 +140,33 @@ inver = 1
 g_decay_min = int(k_reso/20)
 ```
 
+And the model used for the excited states was:
+```
+#pixels is the number of pixels. 128 is working fine.
+pixels = 128
+#num of filters in the CNN
+num_filters = 8
+#size of the kernel in the CNN
+kernel_size = 5
+#Choose the model
+model_num = 4
+#Number of epochs
+no_epochs = 150
+#batch size
+batch_size = 20
+#drop out rate
+drop_out_rate = 0.0
+#learning rate
+learning_rate = 0.0001
+#Loss should be MAE. BCE works as well but less well
+loss = "MAE"   #BCE is binary cross entropy, "dice" for dice
+```
+
 The loss during training looked like this:
+
 ![alt text](loss_vs_epoch_excited.jpg)
 
 And here is how the model performs on simulated ARPES spectra: 
+
 ![alt text](Results_on_simu_excited.jpg)
 
