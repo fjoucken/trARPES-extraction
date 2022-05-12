@@ -83,7 +83,9 @@ learning_rate = 0.0001
 #Loss should be MAE. BCE works as well but less well
 loss = "MAE"   #BCE is binary cross entropy, "dice" for dice
 ```
-The loss evolution during training was: ![alt text](loss_vs_epoch_VB.jpg)
+The loss evolution during training was: 
+![alt text](loss_vs_epoch_VB.jpg)
 
-And here is how the model performs on simulated ARPES spectra: ![alt text](Results_on_simu_VB.jpg)
+And here is how the model performs on simulated ARPES spectra: 
+![alt text](Results_on_simu_VB.jpg)
 
