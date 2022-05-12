@@ -175,3 +175,11 @@ Note that the main differences between the data used for the valence band and th
 2. Only 0 to 2 bands were used for the excited states (0 to 4 for the valence band)
 3. The width of the bare band (label) was larger for the excited states (5 pixels vs 3 pixels for the valence band)
 
+### Results on experimental trARPES data
+
+To apply the models to experimental data, you must first extract the regions of interest in the spectra you want to analyze and then apply the corresponding model to the regions of interest. 
+In the figure below, the models are applied to an experimental trARPES spectrum. The trARPES spectrum is on the green scale while the bare bands extracted from the excited states is in red and the bare bands extracted from the valence band is in blue:
+
+![alt text](Fit_exp_data.jpg)
+
+
