@@ -1,7 +1,7 @@
 import numpy as np
 import re
 import tensorflow as tf
-from tensorflow.keras import datasets, layers, models,activations
+from tensorflow.keras import layers, models,activations
 from tensorflow.keras.layers import BatchNormalization, Conv2D, PReLU, Dropout
 from keras.initializers import Constant
 import cv2 as cv
@@ -10,7 +10,7 @@ import cv2 as cv
 
 
 def load_data_ARPES_exp(load_path, file_names, pixels):
-    '''This loads experimental ARPES spectra. It interpolate the spectra to match the number of pixels the 
+    '''This loads experimental ARPES spectra. It interpolates the spectra to match the number of pixels the 
     model has been trained with'''
     #Load the simulated data for segmentation
     print ("loading data...")

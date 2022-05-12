@@ -1,21 +1,15 @@
 import tensorflow as tf
-from tensorflow.keras import datasets, layers, models
 import winsound
-import pybinding as pb
-import numpy as np
 import matplotlib.pyplot as plt
-from pybinding.repository import graphene
-import time
 import datetime
-import io
 import os.path
 import glob
 from Feature_ARPES_CNN_utils import  load_data_ARPES, get_compiled_model
-from matplotlib import pyplot
 
 '''This code creates and trains a CNN model for extracting bare bands from ARPES spectra.
 It is similar to what was reported in https://aip.scitation.org/doi/full/10.1063/1.5132586 but is adapted to 
-time-resolved spectra, which are very noisy.'''
+time-resolved spectra, which are very noisy.
+It uses functions from Feature_ARPES_CNN_utils.py'''
 
 #Checking you have GPUs
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
@@ -34,7 +28,7 @@ kernel_size = 3
 #Choose the model
 model_num = 3
 #Number of epochs
-no_epochs = 150
+no_epochs = 10
 #batch size
 batch_size = 20
 #drop out rate
@@ -46,7 +40,7 @@ loss = "MAE"   #BCE is binary cross entropy, "dice" for dice
 #I set the model name
 model_name = x.strftime("%m_%d_%y_%H_%M_%S_")+"ARPES_features_thicker_excited_"+loss+"_LR_"+str(learning_rate)+"_filter_"+str(num_filters)+"_DO_"+str(drop_out_rate)+"_epochs_"+str(no_epochs)+"_model_"+str(model_num)
 #This is to load a pre-trained model.
-#if "Y", you load the model  with the name loaded_model_name
+#if "Y", you load the model with the name loaded_model_name
 load_weight = "N"
 loaded_model_name = "04_22_22_15_36_21_ARPES_features_thicker_excited_MAE_LR_0.0005_filter_16_DO_0.0_epochs_200_model_3.ckpt"
 print ('TF version is:')
@@ -132,12 +126,7 @@ history = model.fit(train_X,
                     validation_data=(test_X, test_Y),
                     callbacks=[cp_callback])
 
-#For updating checkpoints files at the end of each epoch:
-os.listdir(checkpoint_dir) #not sure it is used
-
-#Here I save the weights.
-#model.save_weights(checkpoint_path.format(epoch=0))
-
+#Make some noise!
 winsound.Beep(800, 1000)
 plt.plot(history.history['loss'], label='loss')
 plt.plot(history.history['val_loss'], label = 'val_loss')
