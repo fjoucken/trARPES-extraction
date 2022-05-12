@@ -170,3 +170,8 @@ And here is how the model performs on simulated ARPES spectra:
 
 ![alt text](Results_on_simu_excited.jpg)
 
+Note that the main differences between the data used for the valence band and the excited state were:
+1. The width of the spectrum (Voigt profile) was larger for the excited states.
+2. Only 0 to 2 bands were used for the excited states (0 to 4 for the valence band)
+3. The width of the bare band (label) was larger for the excited states (5 pixels vs 3 pixels for the valence band)
+
